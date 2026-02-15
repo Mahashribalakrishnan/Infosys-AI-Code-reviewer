@@ -7,6 +7,7 @@ area = side*side
 
 tree = ast.parse(code)
 print(ast.dump(tree, indent=2))
+print(ast.unparse(tree))
 
 for node in ast.walk(tree):
     if isinstance(node, ast.Import):
